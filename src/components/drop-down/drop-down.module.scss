@@ -1,0 +1,20 @@
+@import '../../styles//mixins';
+
+.dropdown {
+  select {
+    @include paddingAndShadow;
+    margin-top: 48px;
+    background-image: url('/chevron-down-outline.svg');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 90%;
+
+    option {
+      background-color: white;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 16px;
+    }
+  }
+}

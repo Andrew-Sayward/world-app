@@ -1,0 +1,19 @@
+@import '../../styles/vars';
+
+.header {
+  box-shadow: 0px 0px 12px -3px rgba(167, 167, 167, 0.7);
+  background-color: $White;
+
+  > div {
+    max-width: 1440px;
+    margin: auto;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .darkModeButton {
+    cursor: pointer;
+  }
+}

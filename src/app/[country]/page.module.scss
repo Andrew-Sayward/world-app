@@ -1,0 +1,110 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.main {
+  min-height: 100vh;
+  background-color: $White;
+
+  .container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 24px;
+  }
+
+  li,
+  p {
+    font-size: 16px;
+  }
+}
+
+.back {
+  @include paddingAndShadow;
+  @include buttonHover;
+  margin: 48px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.countryCard {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  .image {
+    position: relative;
+    width: 50%;
+    min-height: 500px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      min-height: unset;
+      aspect-ratio: 16 / 9;
+    }
+
+    img {
+      object-fit: contain;
+      padding-right: 48px;
+    }
+  }
+
+  .content {
+    padding: 48px 0;
+    width: 50%;
+    z-index: 2;
+    position: relative;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
+
+    ul {
+      columns: 2;
+      list-style: none;
+
+      @media (max-width: 767px) {
+        columns: 1;
+      }
+
+      li {
+        margin-bottom: 16px;
+      }
+    }
+
+    .borderLinks {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+
+      ul {
+        display: flex;
+        gap: 16px;
+        overflow: visible;
+        flex-wrap: wrap;
+      }
+
+      a {
+        @include paddingAndShadow;
+        border-radius: 0;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+.countryCard {
+  @include paddingAndShadow;
+  padding: 0;
+  background-color: $White;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .image {
+    position: relative;
+    aspect-ratio: 16/9;
+  }
+
+  .content {
+    padding: 24px;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+  }
+}

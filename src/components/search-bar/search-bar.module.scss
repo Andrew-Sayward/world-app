@@ -1,0 +1,23 @@
+@import '../../styles/mixins';
+
+.search {
+  position: relative;
+  margin-top: 48px;
+
+  input {
+    @include paddingAndShadow;
+    padding: 16px 32px 16px 48px;
+    width: 33%;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 24px;
+  }
+}
